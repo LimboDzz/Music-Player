@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <script src="https://kit.fontawesome.com/ea4ba7638e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <body>
+        <div id="player">
+            <div id="wrapper">
+                <div class="details">
+                    <div class="playing">PLAYING x OF y</div>
+                    <div class="track-art"></div>
+                    <div class="track-name">Track Name</div>
+                    <div class="track-artist">Track Artist</div>
+                </div>
+                <div class="sliders">
+                    <div class="slider">
+                        <div class="current-time">00:00</div>
+                        <input type="range" name="time" min="1" max="100" value="0" id="time" class="seek-slider"
+                        onchange="seekTo()">
+                        <div class="duration">00:00</div>
+                    </div>
+                    <div class="slider">
+                        <i class="fa fa-volume-down"></i>
+                        <input type="range" name="volume" id="volume" min="1" max="100" value="50" class="volume-slider"
+                        onchange="setVolumn()"></input>
+                        <i class="fa fa-volume-up"></i>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="random-track" onclick="randomTrack()"><i class="fas fa-random" title="random"></i>
+                    </div>
+                    <div class="prev-track" onclick="prevTrack()"><i class="fas fa-step-backward" title="prev"></i>
+                    </div>
+                    <div class="play-track" onclick="playTrack()"><i class="far fa-play-circle" title="play"></i>
+                    </div>
+                    <div class="next-track" onclick="nextTrack()"><i class="fas fa-step-forward" title="next"></i>
+                    </div>
+                    <div class="repeat-track" onclick="repeatTrack()"><i class="fa fa-repeat" title="repeat"></i>
+                    </div>
+                </div>
+                <div class="loader wave">
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>2
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+    
+    </html>
